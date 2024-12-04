@@ -1,8 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-
 time = np.arange(0, 20, 0.1)
 temperature_signal = np.random.normal(loc=20, scale=1, size=len(time))  # Temperaturi simulate
 
@@ -13,8 +11,6 @@ plt.xlabel('Timp (s)')
 plt.ylabel('Temperatura (°C)')
 plt.grid()
 plt.show()
-
-
 
 plt.figure(figsize=(12, 6)
 plt.hist(temperature_signal, bins=20, color='purple', alpha=0.7)
@@ -31,8 +27,6 @@ plt.xlabel('Temperatura (°C)')
 plt.ylabel('Probabilitate')
 plt.grid()
 plt.show()
-
-
 
 mean_temp = np.mean(temperature_signal)
 median_temp = np.median(temperature_signal)

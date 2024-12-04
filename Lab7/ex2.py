@@ -8,7 +8,6 @@ q = 0.5
 
 x = 6 + (5 * np.sin(2 * np.pi * 2 * t)) / (2 * np.pi * 2 * t)
 
-
 eșantioane = x
 
 cuantizat = np.round(eșantioane / q) * q

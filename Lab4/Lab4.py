@@ -24,3 +24,17 @@ print(max_TMAX)
 min_TMIN= df1["TMIN"].min()
 print(min_TMIN)
 df1.query()
+
+date_statistice = df1[["NUME", "ALT", "TMIN"]].groupby("NUME").min()
+
+#8b
+date_statistice = date_statistice.merge(df1[["NUME", "TMED"]].groupby("NUME").mean(), on="NUME")
+
+#8c
+date_statistice = date_statistice.merge(df1[["NUME", "TMAX"]].groupby("NUME").max(), on="NUME")
+
+#8d
+print(date_statistice)
+
+#9
+print(date_statistice.corr())
